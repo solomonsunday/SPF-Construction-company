@@ -28,14 +28,14 @@
   //
 
   // Smooth scroll for the get started button
-  $('.btn-get-started').on('click', function(e) {
-      e.preventDefault();
-      var target = $(this.hash);
-      if (target.length) {
-        $('html, body').animate({
-          scrollTop: target.offset().top 
-        }, 700);
-      }
+  $('.btn-get-started').on('click', function (e) {
+    e.preventDefault();
+    var target = $(this.hash);
+    if (target.length) {
+      $('html, body').animate({
+        scrollTop: target.offset().top
+      }, 700);
+    }
   });
 
   // Fixed navbar
@@ -47,21 +47,22 @@
       $('.navbar-default').css('display', 'block');
       $('.navbar-default').addClass('fixed-to-top');
 
-    } else if (scrollTop == 0) {
-
-      $('.navbar-default').removeClass('fixed-to-top');
     }
+    //  else if (scrollTop == 0) {
+
+    //   $('.navbar-default').removeClass('fixed-to-top');
+    // }
   });
 
   // Intro carousel
   var introCarousel = $("#introCarousel");
   var introCarouselIndicators = $("#intro-carousel-indicators");
-  introCarousel.find(".carousel-inner").children(".item").each(function(index) {
+  introCarousel.find(".carousel-inner").children(".item").each(function (index) {
     (index === 0) ?
-    introCarouselIndicators.append("<li data-target='#introCarousel' data-slide-to='" + index + "' class='active'></li>") :
-    introCarouselIndicators.append("<li data-target='#introCarousel' data-slide-to='" + index + "'></li>");
+    introCarouselIndicators.append("<li data-target='#introCarousel' data-slide-to='" + index + "' class='active'></li>"):
+      introCarouselIndicators.append("<li data-target='#introCarousel' data-slide-to='" + index + "'></li>");
 
-    $(this).css("background-image", "url('" + $(this).children('.carousel-background').children('img').attr('src') +"')");
+    $(this).css("background-image", "url('" + $(this).children('.carousel-background').children('img').attr('src') + "')");
     $(this).children('.carousel-background').remove();
   });
 
@@ -71,34 +72,34 @@
   //   $(this).find('.btn-get-started').addClass('animated fadeInUp');
   // });
 
-	
+
   //About
-	 var parallax = function() {
-		
-		$('#parallax1, .parallax').waypoint( function( direction ) {
+  var parallax = function () {
 
-			if( direction === 'down' && !$(this.element).hasClass('ftco-animated') ) {
+    $('#parallax1, .parallax').waypoint(function (direction) {
 
-				var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',')
-				$(this.element).find('.number > span').each(function(){
-					var $this = $(this),
-						num = $this.data('number');
-					$this.animateNumber(
-					  {
-					    number: num,
-					    numberStep: comma_separator_number_step
-					  }, 7000
-					);
-				});
-				
-			}
+      if (direction === 'down' && !$(this.element).hasClass('ftco-animated')) {
 
-		} , { offset: '95%' } );
-      counter();
-	}
-	
-	
-	
+        var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',')
+        $(this.element).find('.number > span').each(function () {
+          var $this = $(this),
+            num = $this.data('number');
+          $this.animateNumber({
+            number: num,
+            numberStep: comma_separator_number_step
+          }, 7000);
+        });
+
+      }
+
+    }, {
+      offset: '95%'
+    });
+    counter();
+  }
+
+
+
   //parallax
   if ($('#parallax1').length || $('#parallax2').length) {
 

@@ -163,16 +163,21 @@ nav.navbar.fixed-to-top{
 	z-index: 9999;
 }
 
+
 .navbar-default .navbar-nav>li>a {
 	color: #fff;
 	font-weight: 700;
 	text-transform: uppercase;
+	background-color: transparent;
 }
 
-.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus{
+.navbar-default .navbar-nav> .active>a,
+.navbar-default .navbar-nav>li>a:hover, 
+.navbar-default .navbar-nav>li>a:focus{
 	border-bottom: groove #b82601 1px;
 	cursor: pointer;
 	color: #b82601;
+	background-color: transparent;
 	-webkit-transition: all 300ms ease-in-out;
 	-moz-transition: all 300ms ease-in-out;
 	-ms-transition: all 300ms ease-in-out;
@@ -181,11 +186,13 @@ nav.navbar.fixed-to-top{
 	outline: 0;
 }
 
+
+
 /* brand / logo */
 .navbar-default .navbar-brand{
 	color: #fff;
 	text-transform: uppercase;
-	font-weight: 700;
+	margin-top: -20px;
 	font-size: 2em;
 }
 
@@ -219,9 +226,9 @@ Home sections
 .section-heading .heading-line {
 	margin:0 auto;
 	display: block;
-	height: 1px;
+	height: 2px;
 	width: 80px;
-	background: #333;
+	background: #B82601;
 	margin-top: 10px;
 	margin-bottom: 20px;
 }
@@ -330,7 +337,7 @@ Intro
 #intro h2 {
   color: #fff;
   margin-bottom: 30px;
-  font-size: 48px;
+  font-size: 40px;
   font-weight: 700;
 }
 
@@ -522,11 +529,189 @@ Team
 	margin-bottom: 30px;
 }
 
+/*===============================
+Testimony
+===============================*/
+
+#carousel-quote{
+	padding: 0 150px 40px;
+	margin-top: 40px;
+}
+#carousel-quote .carousel-indicators li{
+	
+	margin: 5px;
+	cursor:pointer;
+	border:1px solid #060606;
+	border-radius: 50px;
+	transition: all 0.4s;
+	margin-top: -50px;
+
+}
+#carousel-quote .carousel-indicators .active{
+	background-color:  rgba(184,38,1,1.00);
+}
+.carousel-inner{
+	min-height: 250px;
+}
+
+blockquote{
+	border: 0;
+	
+}
+
+
+#testimony{
+	display: inline-block;
+    width: 100%;
+    line-height: 1;
+    vertical-align: middle;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color:#fff; 
+	font-family:Constantia, Lucida Bright, DejaVu Serif, Georgia, serif;
+	
+}
+#testimony .carousel-inner .card{
+	border: 2px solid  inset white ;
+	border-color: white;
+	box-shadow: 0 0 2px 0  #474444;
+}
+
+@media (max-width:480px){
+
+
+	.carousel-inner{
+	min-height: 100px;
+}
+	#carousel-quote{
+	padding: 0 30px 50px;
+	margin-top: -100px;
+}
+	#testimony p{
+		font-size: 15px;
+	}
+	
+}
+@media (max-width:650px){
+	
+	.carousel-inner{
+	min-height: 100px;
+}
+	#carousel-quote{
+	padding: 0 30px 50px;
+	margin-top: 40px;
+}
+	#testimony p{
+		font-size: 15px;
+	}
+	
+}
+
+@media screen and (min-width: 767px) and (max-width: 830px){
+
+ 
+	.carousel-inner{
+	min-height: 100px;
+    }
+	#carousel-quote{
+	padding: 0 20px 50px;
+	margin-top: 40px;
+}
+}
+   @media screen and (max-width: 992px){
+	.carousel-inner{
+	min-height: 100px;
+    }
+	#carousel-quote{
+	padding: 0 20px 50px;
+	margin-top: 40px;
+	}
+	   
+}
 
 
 /* ================================
 Services
 ================================= */
+
+
+.services {
+	margin: 60px 0 80px 0;
+}
+
+.services .service-item {
+	background-color: #062F4F;
+	color: #fff;
+	padding: 60px 30px 20px 30px;
+	text-align: center;
+	transition: all 0.5s;
+	box-shadow: 0 0 10px 0 #000000;
+}
+
+.service-item h4 {
+	font-size: 17px;
+	text-transform: uppercase;
+	font-weight: 900;
+	letter-spacing: 0.5px;
+	margin-top: 40px;
+	margin-bottom: 20px;
+	color: #fff;
+	
+}
+
+.service-item .service-icon {
+	margin: 0 auto;
+	background-repeat: no-repeat;
+	display: inline-block;
+	width: 64px;
+	height: 64px;
+	text-align: center;
+}
+
+.first-service .service-icon {
+	background-image: url(../img/service-icon-01.png);
+	transition: all 0.5s;
+}
+
+.second-service .service-icon {
+	background-image: url(../img/service-icon-02.png);
+	transition: all 0.5s;
+}
+
+.third-service .service-icon {
+	background-image: url(../img/service-icon-03.png);
+	transition: all 0.5s;
+}
+
+.service-item h4:hover {
+	color: #000000;
+}
+
+.service-item:hover {
+	color: #121212;
+	background-color: #1168A7;
+}
+
+.first-service:hover .service-icon {
+	background-image: url(../img/service-icon-01.1.png);
+}
+
+.second-service:hover .service-icon {
+	background-image: url(../img/service-icon-02.2.png);
+}
+
+
+.third-service:hover .service-icon {
+	background-image: url(../img/service-icon-03.3.png);
+}
+
+
+
+
+
+
+
 .service.carousel h4,.service.carousel p {
 	text-align: left;
 }
@@ -889,12 +1074,6 @@ footer a:hover {
 	text-decoration: underline;
 }
 
-
-.site-menu{
-	background: #062F4F;
-	margin-top: 1vh;
-}
-
 /* ================================
 more media queries
 ================================= */
@@ -937,6 +1116,11 @@ more media queries
 	.service p{
 			margin-bottom: 60px;
 	}
+	
+	.service-item {
+		margin: 30px 0px; 
+	}
+	
 	.og-expander {
 		background: transparent;
 
