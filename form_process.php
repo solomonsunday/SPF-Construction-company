@@ -59,7 +59,7 @@ if (empty($_POST["subject"])) {
 			$message_body .= "$key: $value\n";
 		}
 		
-		$to = 'eyitreezy@gmail.com,  teebilly19@gmail.com';
+		$to = 'info@spfconstruct.com,  schinoyerem007@gmail.com';
 		$headers="From: ".$email."\n".$name;
 		$subject= $subject;
     	$message="Phone No: ".$phone."\n"
